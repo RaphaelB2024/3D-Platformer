@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float Speed = 3f;
-    public float Jump = 5f;
+    public float jumpForce = 5f;
     Rigidbody rb;
 
     public Transform groundCheck;
@@ -30,11 +30,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-           rb.velocity = new Vector3(rb.velocity.x,Jump,rb.velocity.z);
+            Jump();
         }
 
+    }
 
+    void Jump()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy Head"))
+        {
+            Destroy(collision.transform.parent.gameObject);
+        }
     }
     bool IsGrounded()
     {
