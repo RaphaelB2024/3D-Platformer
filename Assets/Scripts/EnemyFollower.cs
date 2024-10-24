@@ -22,7 +22,7 @@ public class EnemyFollower : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy Activator"))
+        if (other.gameObject.CompareTag("Player"))
         {
             EnemyDetector = true;
         }
