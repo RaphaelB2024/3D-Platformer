@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
+    public GameObject player;
+    public float DeathPit = -50f;
 
-    public float pit = -1f;
-
-    private void Update()
+    void Update()
     {
-        if (transform.position.y < pit);
-        {
+        if (player.transform.position.y < DeathPit)
+       {
             Die();
-        }
+       }
     }
     private void OnCollisionEnter(Collision collision)
     {
