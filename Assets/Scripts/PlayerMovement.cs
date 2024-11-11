@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask ground;
 
+    public AudioSource jumpSound;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -38,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-
+        jumpSound.Play();
     }
 
     private void OnCollisionEnter(Collision collision)

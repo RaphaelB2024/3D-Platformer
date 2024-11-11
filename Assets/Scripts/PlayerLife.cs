@@ -9,6 +9,8 @@ public class PlayerLife : MonoBehaviour
     public GameObject player;
     public float DeathPit = -50f;
 
+    public AudioSource deathSound;
+
     void Update()
     {
         if (player.transform.position.y < DeathPit)
@@ -26,6 +28,7 @@ public class PlayerLife : MonoBehaviour
 
     void Die()
     {
+        deathSound.Play();
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<PlayerMovement>().enabled = false;
