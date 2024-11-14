@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class StickyPlatform : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    private Vector3 originalScale; // Store the player's original scale
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.SetParent(transform);
+            originalScale = collision.transform.localScale; // Save the original scale
+            collision.transform.SetParent(transform); // Parent the player to the platform
+            collision.transform.localScale = originalScale; // Reset the player's scale
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.SetParent(null);
+            collision.transform.SetParent(null); // Unparent the player
+            collision.transform.localScale = originalScale; // Reset the player's scale just in case
         }
     }
 }
