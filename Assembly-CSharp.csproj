@@ -63,7 +63,6 @@
     <Compile Include="Assets\Scripts\EnemyFollower.cs" />
     <Compile Include="Assets\Scripts\WaypointFollower.cs" />
     <Compile Include="Assets\Scripts\StickyPlatform.cs" />
-    <Compile Include="Assets\Scripts\CameraRotate.cs" />
     <Compile Include="Assets\Scripts\PlayerLife.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\ItemCollector.cs" />

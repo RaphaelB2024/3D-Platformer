@@ -570,13 +570,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.134527, y: -0, z: -0, w: 0.99091}
-  m_LocalPosition: {x: 0, y: 2.79, z: -6.44}
+  m_LocalRotation: {x: 0.2049764, y: -0.017337944, z: 0.0036315606, w: 0.97860664}
+  m_LocalPosition: {x: 0.08, y: 3.25, z: -4.12}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1999838830}
-  m_LocalEulerAnglesHint: {x: 15.463, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 23.66, y: -2.03, z: 0}
 --- !u!1 &978479452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1175,6 @@ GameObject:
   - component: {fileID: 1999838836}
   - component: {fileID: 1999838835}
   - component: {fileID: 1999838834}
-  - component: {fileID: 1999838837}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1209,7 +1208,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!136 &1999838827
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1313,7 +1312,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b0cba807e034b4ba2ab32d69c085f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  sensitivity: 1000
+  playerCamera: {fileID: 963194228}
+  Speed: 4
   jumpForce: 5
   groundCheck: {fileID: 950975403}
   ground:
@@ -1637,19 +1638,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1999838837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999838825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c2a204606916e84ea143e0581ae868c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: -1
 --- !u!4 &2004744955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5902702770114122947, guid: a0dd6787c58ed1f42ab7ea91a0125492, type: 3}
@@ -1663,6 +1651,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1547884909}
     m_Modifications:
+    - target: {fileID: 2326110898122818599, guid: a0dd6787c58ed1f42ab7ea91a0125492, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326110898122818599, guid: a0dd6787c58ed1f42ab7ea91a0125492, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326110898122818599, guid: a0dd6787c58ed1f42ab7ea91a0125492, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4657322433324946902, guid: a0dd6787c58ed1f42ab7ea91a0125492, type: 3}
       propertyPath: m_Name
       value: Moving Platform 1
