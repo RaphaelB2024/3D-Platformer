@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
         jumpSound.Play();
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy Head"))
@@ -66,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.transform.parent.gameObject);
         }
     }
+
+
     bool IsGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
