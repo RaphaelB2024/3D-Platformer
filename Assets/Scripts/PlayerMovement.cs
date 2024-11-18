@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float Speed = 3f;
     public float jumpForce = 5f;
     Rigidbody rb;
+    private bool doubleJump;
 
     public Transform groundCheck;
     public LayerMask ground;
@@ -37,10 +38,21 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(moveDirection.x * Speed, rb.velocity.y, moveDirection.z * Speed);
 
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (IsGrounded() && !Input.GetButtonDown("Jump"))
         {
-            Jump();
+            doubleJump = false;
         }
+
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (IsGrounded() || doubleJump)
+                {
+                Jump();
+
+                doubleJump = !doubleJump;
+                }
+            }
         
         //Handle mouse look
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
