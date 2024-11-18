@@ -10,26 +10,31 @@ public class PlayerMovement : MonoBehaviour
     float xRotation = 0f;
     public Transform playerCamera;
     
+    //Rigidbody and movement
     public float Speed = 3f;
     public float jumpForce = 5f;
+    public float dashX = 4f;
+    public float dashY = 2f;
     Rigidbody rb;
-    private bool doubleJump;
 
+    //Ground stuff
     public Transform groundCheck;
     public LayerMask ground;
 
+    //Audio
     public AudioSource jumpSound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //get movement inputs
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -37,21 +42,19 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveDirection = transform.right * horizontalInput + transform.forward * verticalInput;
         rb.velocity = new Vector3(moveDirection.x * Speed, rb.velocity.y, moveDirection.z * Speed);
 
-
-        if (IsGrounded() && !Input.GetButtonDown("Jump"))
-        {
-            doubleJump = false;
-        }
-
+  
 
             if (Input.GetButtonDown("Jump"))
             {
-                if (IsGrounded() || doubleJump)
+                if (IsGrounded())
                 {
-                Jump();
-
-                doubleJump = !doubleJump;
+                    Jump();
                 }
+            }
+
+            if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                LowJump();
             }
         
         //Handle mouse look
@@ -70,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
         jumpSound.Play();
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy Head"))
@@ -78,9 +82,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void LowJump()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y * 0.5f, rb.velocity.z);
+    }
+
+    void Dash()
+    {
+        rb.velocity = new Vector3(dashX, dashY, rb.velocity.z);
+    }
 
     bool IsGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
+    
 }

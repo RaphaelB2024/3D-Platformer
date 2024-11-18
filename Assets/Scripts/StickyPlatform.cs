@@ -1,27 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class StickyPlatform : MonoBehaviour
 {
-    private Vector3 originalScale; // Store the player's original scale
+    private Vector3 lastPlatformPos;
+    private GameObject player;
+    private void Start()
+    {
+        lastPlatformPos = transform.position;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.name == "Player")
         {
-            originalScale = collision.transform.localScale; // Save the original scale
-            collision.transform.SetParent(transform); // Parent the player to the platform
-            collision.transform.localScale = originalScale; // Reset the player's scale
+            player = collision.gameObject;
+            lastPlatformPos = transform.position;
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.name == "Player")
         {
-            collision.transform.SetParent(null); // Unparent the player
-            collision.transform.localScale = originalScale; // Reset the player's scale just in case
+            player = null;
         }
+    }
+
+    private void Update()
+    {
+        if (player != null)
+        {
+            //Calculate platform movement since last frame
+            Vector3 platformMovement = transform.position - lastPlatformPos;
+
+            //Apply movement offset to player position
+            player.transform.position += platformMovement;
+        }
+
+        //Update last position for next frame
+        lastPlatformPos = transform.position;
     }
 }
