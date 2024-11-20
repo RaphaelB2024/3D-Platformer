@@ -24,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
     //Audio
     public AudioSource jumpSound;
 
+    //upgrade variables
+    bool DashUpg = false;
+    int MaxDash = 1;
+    int Dashes = 0;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -55,6 +60,17 @@ public class PlayerMovement : MonoBehaviour
             if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
             {
                 LowJump();
+            }
+
+            if(Input.GetButtonDown("Jump") && !IsGrounded() && DashUpg && Dashes > 0)
+            {
+                Dash();
+                Dashes--;              
+            }
+
+            if(IsGrounded())
+            {
+               Dashes = MaxDash;
             }
         
         //Handle mouse look
@@ -89,12 +105,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Dash()
     {
-        rb.velocity = new Vector3(dashX, dashY, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x * dashX, dashY, rb.velocity.z);
     }
 
     bool IsGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("DashUpg"))
+        {
+           DashUpg = true;
+           Destroy(other.gameObject);
+        }
+    }
 }
