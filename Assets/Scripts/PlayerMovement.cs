@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     //Rigidbody and movement
     public float Speed = 3f;
     public float jumpForce = 5f;
-    public float dashX = 4f;
+   // public float dashX = 4f;
     public float dashY = 2f;
     Rigidbody rb;
 
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Dash()
     {
-        rb.velocity = new Vector3(rb.velocity.x * dashX, dashY, rb.velocity.z);
+        rb.velocity = new Vector3(10, dashY, rb.velocity.z);
     }
 
     bool IsGrounded()
