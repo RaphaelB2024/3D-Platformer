@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour
 {
     public GameObject player;
+    public GameObject DeathScreen;
     public float DeathPit = -50f;
 
     public AudioSource deathSound;
@@ -32,12 +33,14 @@ public class PlayerLife : MonoBehaviour
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<PlayerMovement>().enabled = false;
-        Invoke(nameof(ReloadLevel),1.3f);
+        Invoke(nameof(ShowDeathScreen),1.3f);
+        Cursor.lockState = CursorLockMode.None;
     }
 
-    void ReloadLevel()
+    void ShowDeathScreen()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       DeathScreen.SetActive(true);
+       Time.timeScale = 0;
     }
 
 }
