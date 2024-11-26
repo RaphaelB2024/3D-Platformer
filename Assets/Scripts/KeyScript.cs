@@ -8,14 +8,14 @@ public class KeyScript : MonoBehaviour
 
     private void Start()
     {
-        doorCollider.SetActive(false);
+        doorCollider.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            doorCollider.SetActive(true);
+            doorCollider.SetActive(false);
             Destroy(gameObject);
         }
     }

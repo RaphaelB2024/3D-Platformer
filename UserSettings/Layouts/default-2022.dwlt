@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -609,9 +609,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 30.53906, y: 5.878076, z: -2.518609}
+    m_Target: {x: 34.86, y: 1.8499999, z: -4.79}
     speed: 2
-    m_Value: {x: 30.53906, y: 5.878076, z: -2.518609}
+    m_Value: {x: 34.86, y: 1.8499999, z: -4.79}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -657,13 +657,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2534611, y: 0.53759307, z: -0.17378034, w: 0.7854397}
+    m_Target: {x: 0.10707896, y: 0.52181226, z: -0.06640742, w: 0.8439388}
     speed: 2
-    m_Value: {x: 0.25315407, y: 0.53867257, z: -0.17412864, w: 0.78448963}
+    m_Value: {x: 0.107057735, y: 0.52170885, z: -0.066394255, w: 0.8437716}
   m_Size:
-    m_Target: 7.2735753
+    m_Target: 23.509825
     speed: 2
-    m_Value: 7.616309
+    m_Value: 23.509825
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -825,21 +825,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 10fbffffb45b0000fc5b0000305c0000
+      m_ExpandedIDs: 0aeeffff82eeffff1eeffffffe62000026630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Wall (2)
+        m_OriginalName: Wall (2)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 25448
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -894,7 +894,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/8-Bit Style Sound Effects
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -902,30 +902,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/8-Bit Style Sound Effects
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\RBranston2024\Documents\GitHub\3D-Platformer
+  m_LastProjectPath: C:\Users\RBranston2024\3D Platformer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d65d0000
-    m_LastClickedID: 24022
-    m_ExpandedIDs: 00000000c05d0000c25d000000ca9a3b
+    m_SelectedIDs: 8a790000
+    m_LastClickedID: 31114
+    m_ExpandedIDs: 00000000e85a0000426f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Leohpaz
+      m_OriginalName: Leohpaz
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 28478
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -939,7 +939,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c05d0000c25d0000
+    m_ExpandedIDs: 00000000e85a00005c640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

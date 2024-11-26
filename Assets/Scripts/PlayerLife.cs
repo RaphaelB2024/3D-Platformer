@@ -30,6 +30,7 @@ public class PlayerLife : MonoBehaviour
     void Die()
     {
         deathSound.Play();
+        DeathPit = -500f;
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<PlayerMovement>().enabled = false;
@@ -40,7 +41,7 @@ public class PlayerLife : MonoBehaviour
     void ShowDeathScreen()
     {
        DeathScreen.SetActive(true);
-       Time.timeScale = 0;
+        Time.timeScale = 0;
     }
 
 }
