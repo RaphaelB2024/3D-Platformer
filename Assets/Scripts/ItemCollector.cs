@@ -9,11 +9,13 @@ using UnityEngine.UI;
 public class ItemCollector : MonoBehaviour
 {
     int collectables = 0;
+    int batteries = 0;
     float time = 0;
 
     public TextMeshProUGUI collectableText;
     public TextMeshProUGUI TimeText;
     public AudioSource coinSound;
+    public AudioSource batterySound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +25,18 @@ public class ItemCollector : MonoBehaviour
             Destroy(other.gameObject);
             collectables++;
             collectableText.text = "Score: " + collectables;
+        }
+
+        if(other.gameObject.CompareTag("Battery"))
+        {
+            batterySound.Play();
+            Destroy(other.gameObject);
+            batteries++;
+        }
+
+        if (batteries == 1)
+        {
+
         }
     }
 

@@ -9,6 +9,7 @@ TagManager:
   - Enemy Activator
   - Collectable
   - DashUpg
+  - Battery
   layers:
   - Default
   - TransparentFX
