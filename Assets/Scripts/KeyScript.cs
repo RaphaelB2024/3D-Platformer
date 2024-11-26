@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject doorCollider;
+
+    private void Start()
     {
-        
+        doorCollider.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.tag == "Player")
+        {
+            doorCollider.SetActive(true);
+            Destroy(gameObject);
+        }
     }
 }

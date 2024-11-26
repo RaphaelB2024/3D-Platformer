@@ -9,8 +9,10 @@ using UnityEngine.UI;
 public class ItemCollector : MonoBehaviour
 {
     int collectables = 0;
+    float time = 0;
 
     public TextMeshProUGUI collectableText;
+    public TextMeshProUGUI TimeText;
     public AudioSource coinSound;
 
     private void OnTriggerEnter(Collider other)
@@ -24,5 +26,9 @@ public class ItemCollector : MonoBehaviour
         }
     }
 
-
+    private void Update()
+    {
+        time += Time.deltaTime;
+        TimeText.text = "Time: " + Mathf.Round((time *100)) / 100;
+    }
 }

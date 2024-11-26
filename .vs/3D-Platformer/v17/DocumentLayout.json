@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|c:\\users\\rbranston2024\\documents\\github\\3d-platformer\\assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\assets\\scripts\\itemcollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\itemcollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|c:\\users\\rbranston2024\\documents\\github\\3d-platformer\\assets\\scripts\\keyscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\keyscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\assets\\scripts\\itemcollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\itemcollector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66BBA66C-B282-FC6A-9E46-986329F69B45}|Assembly-CSharp.csproj|C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\assets\\scripts\\enemyfollower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "KeyScript.cs",
+              "DocumentMoniker": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\KeyScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\KeyScript.cs",
+              "ToolTip": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\KeyScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\KeyScript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T09:52:29.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SceneLoader.cs",
               "DocumentMoniker": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\SceneLoader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SceneLoader.cs",
@@ -50,12 +67,11 @@
               "RelativeToolTip": "Assets\\Scripts\\SceneLoader.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T10:05:29.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T10:05:29.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "WaypointFollower.cs",
               "DocumentMoniker": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\WaypointFollower.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WaypointFollower.cs",
@@ -67,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "EnemyFollower.cs",
               "DocumentMoniker": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\EnemyFollower.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyFollower.cs",
@@ -79,19 +95,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ItemCollector.cs",
               "DocumentMoniker": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\ItemCollector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ItemCollector.cs",
               "ToolTip": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\ItemCollector.cs",
               "RelativeToolTip": "Assets\\Scripts\\ItemCollector.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T13:01:05.296Z"
+              "WhenOpened": "2024-10-24T13:01:05.296Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
@@ -103,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PlayerLife.cs",
               "DocumentMoniker": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\PlayerLife.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerLife.cs",
@@ -115,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "StickyPlatform.cs",
               "DocumentMoniker": "C:\\Users\\RBranston2024\\Documents\\GitHub\\3D-Platformer\\Assets\\Scripts\\StickyPlatform.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\StickyPlatform.cs",
