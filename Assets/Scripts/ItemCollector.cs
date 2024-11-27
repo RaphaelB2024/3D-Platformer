@@ -16,6 +16,7 @@ public class ItemCollector : MonoBehaviour
     public TextMeshProUGUI TimeText;
     public AudioSource coinSound;
     public AudioSource batterySound;
+    public GameObject endDoor;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -34,9 +35,9 @@ public class ItemCollector : MonoBehaviour
             batteries++;
         }
 
-        if (batteries == 1)
+        if (batteries == 3)
         {
-
+            endDoor.SetActive(false);
         }
     }
 

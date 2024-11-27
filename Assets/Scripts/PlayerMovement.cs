@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     int MaxDash = 1;
     int Dashes = 0;
 
+    public GameObject UpgradeCanvas;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -113,12 +115,21 @@ public class PlayerMovement : MonoBehaviour
         return Physics.CheckSphere(groundCheck.position, .1f, ground);
     }
 
+    void DeactivateUpgrade()
+    {
+        UpgradeCanvas.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("DashUpg"))
         {
            DashUpg = true;
            Destroy(other.gameObject);
+
+           UpgradeCanvas.SetActive(true);
+            Invoke(nameof(DeactivateUpgrade), 1.3f);
+
         }
     }
 }
