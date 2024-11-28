@@ -8,6 +8,7 @@ public class SceneLoader : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadSceneAsync("Game");
+        Time.timeScale = 1;
     }
 
     public void loadMenu()
@@ -17,6 +18,12 @@ public class SceneLoader : MonoBehaviour
 
     public void ExitGame()
     {
-        
+        Application.Quit();
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 }

@@ -33,6 +33,7 @@ public class PlayerLife : MonoBehaviour
         DeathPit = -500f;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<PlayerMovement>().enabled = false;
+        GetComponentInChildren<Animator>().enabled = false;
         Invoke(nameof(ShowDeathScreen),1.3f);
         Cursor.lockState = CursorLockMode.None;
     }
