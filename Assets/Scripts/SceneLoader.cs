@@ -5,31 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void loadLevel()
+    public void PlayGame()
     {
-        //Load Game
         SceneManager.LoadSceneAsync("Game");
     }
 
     public void loadMenu()
     {
-        //Load Menu
         SceneManager.LoadSceneAsync("Menu");
     }
 
-    //restart game (called by button)
-    public void RestartGame()
+    public void ExitGame()
     {
-        //Reset time and reload scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
-
-    }
-
-    public void QuitGame()
-    {
-        //Reset time and quit app
-        Time.timeScale = 1;
-        Application.Quit();
+        
     }
 }

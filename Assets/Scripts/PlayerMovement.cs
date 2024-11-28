@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     int MaxDash = 1;
     int Dashes = 0;
 
+    Animator anim;
+
     public GameObject UpgradeCanvas;
 
     void Start()
@@ -36,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -73,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
             if(IsGrounded())
             {
                Dashes = MaxDash;
+               anim.SetBool("Grounded",IsGrounded());
             }
         
         //Handle mouse look
@@ -84,11 +89,15 @@ public class PlayerMovement : MonoBehaviour
 
         playerCamera.localRotation = Quaternion.Euler(xRotation, 0f, 0f); //Rotate camera
         transform.Rotate(Vector3.up * mouseX); //Rotate player
+
+        //Animation Variables
+        anim.SetFloat("Speed", moveDirection.magnitude);
     }
 
     void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+        anim.SetTrigger("Jumped");
         jumpSound.Play();
     }
 

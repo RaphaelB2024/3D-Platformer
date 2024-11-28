@@ -31,7 +31,6 @@ public class PlayerLife : MonoBehaviour
     {
         deathSound.Play();
         DeathPit = -500f;
-        GetComponent<MeshRenderer>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<PlayerMovement>().enabled = false;
         Invoke(nameof(ShowDeathScreen),1.3f);

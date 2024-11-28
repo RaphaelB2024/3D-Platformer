@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 79269957}
   - component: {fileID: 79269956}
   - component: {fileID: 79269955}
+  - component: {fileID: 79269959}
   m_Layer: 5
   m_Name: MenuCanvas
   m_TagString: Untagged
@@ -226,6 +227,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &79269959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79269954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb55a0e5c4dd2d4faf3758716b4545b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &764138172
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 764138174}
-  - component: {fileID: 764138173}
+  - component: {fileID: 764138175}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -243,18 +256,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &764138173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764138172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbb55a0e5c4dd2d4faf3758716b4545b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &764138174
 Transform:
   m_ObjectHideFlags: 0
@@ -270,6 +271,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &764138175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764138172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb55a0e5c4dd2d4faf3758716b4545b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &816070377
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +404,7 @@ RectTransform:
   m_GameObject: {fileID: 1461983051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12.382368, y: 5.0837, z: 5.0837}
+  m_LocalScale: {x: 11.852527, y: 5.0837, z: 5.0837}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 79269958}
@@ -466,7 +479,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545878575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.53856, y: 3.0922, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -474,7 +487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 542, y: -161}
+  m_AnchoredPosition: {x: 518, y: -161}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1545878577
@@ -521,7 +534,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 764138173}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -598,7 +611,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551670597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0.53856, y: 3.0922, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -606,7 +619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 379, y: -164}
+  m_AnchoredPosition: {x: 362, y: -164}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551670599
@@ -653,9 +666,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 764138173}
+      - m_Target: {fileID: 764138175}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: loadLevel
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -678,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
